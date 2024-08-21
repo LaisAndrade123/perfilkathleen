@@ -1,18 +1,21 @@
 /*  Google Fonts */  /* Atalho para Comentar Shift + ALT + A  */
-@import url('https://fonts.googleapis.com/css2?family=Francois+One&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+IT+Moderna:wght@100..400&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 /* Variaveis das Cores */
 /* TEMA DARK */
 :root, :root[data-theme='dark'] {
     --primary-color: #f0f0f0;  /*cor principal Textos*/
-    --primary-bg-color: #171511;  /*cor principal Fundo*/ 
+    --primary-bg-color: #171111;  /*cor principal Fundo*/ 
     /* bg = background == cor do Fundo */
     --secondary-bg-color: #28292E;  
     --primary-border-color: #28292E;
     --secondary-border-color: #56575A;
     --title-color: #F0F0F0;
+    
     --link-color: #8f8f8f;
     --link-hover: #F0F0F0;
+
     --icon-color: #C7C8C9;
 }
 /* TEMA LIGHT */
@@ -58,107 +61,122 @@ a:hover {
 }
 
 i {
-    color: var(--icon-color);
+   color: var(--icon-color); 
 }
 
 .header {
     display: flex;
     flex-flow: row wrap;
-    /* coloca o conteudo em linha e permite a quebra de linha*/
+    /* Coloca o conteúdo em linha e permite a quebra de linha. */
     justify-content: space-between;
-    /* os itens dentros do container flexivel serão distribuidos de maneira uniforme ao longo do eixo principal, com espaços iguais entre eles*/
+    /* Os itens dentro do container flexível serão distribuídos de maneira uniforme ao longo do eixo principal, com espaços iguais entre eles.  */
     align-items: center;
     width: 100%;
     padding: 0.5rem 1rem;
-    z-index: 2; 
-    /*sobreposição*/  
+    z-index: 2;/*sobreposição*/
+}
+   
+.header-logo .logo{
+    width: 3.25rem;
+    height: 3.25rem;
 }
 
-    .header-logo .logo {
-        width: 3.25rem;
-        height: 3.25rem;
+.header-logo .logo2 {
+    width: 6.25rem;
+    height: 1.86rem;
+    margin-left: 20px;
+    position: relative;
+    bottom: 10px;
+}
 
-    }
+html[data-theme='light'] .logo {
+    filter: invert(1);
+} 
 
-    #toggleTheme{
-        font-size: 1.5rem;/* tamanho da letra*/
-        color: var (--icon-color);
-        cursor: pointer;
-        transition: ease-in-out .4s;
-    }
+html[data-theme='light'] .logo2 {
+    filter: invert(1);
+} 
 
-    .menu {
-        display: flex;
-        /* Torna o elemento um Flex container automaticamente transformando todos os filhos diretos em flex itens*/
-        align-items: center ;
-        background: var(--primary-bg-color);
-        gap: 1rem;
-    }
+#toggleTheme {
+    font-size: 1.5rem; 
+    color: var(--icon-color);
+    cursor: pointer;
+    transition: ease-in-out .4s;
+}
 
-    .menu-link {
-        display:flex ;
-        align-items: center;
-        gap: .5rem;
-    }
+.menu {
+    display: flex;
+    /* Torna o Elemento um Flex container automaticamente transformando todos os filhos diretos em Flex Itens  */
+    align-items: center;
+    background: var(--primary-bg-color);
+    gap: 1rem;
+} 
 
-    .menu-mobile { /* UL */
-        width: 100%;
+.menu-link {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.menu-mobile {   /* UL */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid var(--primary-border-color);
+}
+
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    padding: .5rem 1rem;
+}
+
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text {
+    color: var(--link-hover);
+}
+
+.menu-icon, .menu-text {
+    color: var(--link-color);
+    font-weight: 600;
+}
+
+.menu-icon {
+    font-size: 1.5rem;
+}
+
+.menu-text {
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+.header-nav {
+    display: none;
+}
+
+.menu-principal {
+    gap: 1rem;
+}
+
+
+/* =====  --------------------- ======= */
+
+/* CSS Responsivo */
+@media (min-width: 768px)  {
+    .header {
         position: fixed;
-        bottom: 0;
-        justify-content: space-between;
-        border-top: 1px solid var(--primary-border-color);
-
+        border-bottom: 1px solid var(--primary-border-color);
+        padding: 1rem 6rem;
     }
-
-
-    .menu-mobile .menu-link {
-        flex-direction: column;
-        justify-content: center;
-        padding: 0.5rem 1rem;
-    }
-
-    .menu-link.active .menu-icon,
-    .menu-link.active .menu-text,
-    .menu-link:hover .menu-icon,
-    .menu-link:hover .menu-text {
-        color: var(--link-hover);
-
-    }
-
-    .menu-icon, .menu-text {
-        color: var(--link-color);
-        font-weight: 600;
-    }
-
-    .menu-icon {
-        font-size: 1.5rem;
-    }
-
-    .menu-text {
-        font-size: .75rem;
-        text-transform: uppercase;
-    }
-
-    .header-nav {
+    .nav-mobile {
         display: none;
     }
-
-    .menu-principal {
-        gap: 1rem;
+    .header-nav {
+        display: flex;
     }
+}
 
-    /*------------------------ */
-    /* Css Responsivo*/
-    @media (min-width: 768px) {
-        .header {
-            position: fixed;
-            border-bottom: 1px solid var(--primary-border-color);
-            padding: 1rem 6rem;
-        }
-        .nav-mobile {
-            display: none;
-        }
-        .header-nav {
-            display: flex;
-        }
-    }
+
