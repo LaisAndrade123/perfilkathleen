@@ -8,7 +8,7 @@
     --primary-color: #f0f0f0;  /*cor principal Textos*/
     --primary-bg-color: #171111;  /*cor principal Fundo*/ 
     /* bg = background == cor do Fundo */
-    --secondary-bg-color: #28292E;  
+    --secondary-bg-color: #27282e;  
     --primary-border-color: #28292E;
     --secondary-border-color: #e4e4e4;
     --title-color: #F0F0F0;
@@ -20,7 +20,7 @@
 }
 /* TEMA LIGHT */
 :root[data-theme='light'] {
-    --primary-color: #0d0c09; /* cor principal textos */
+    --primary-color: #0d0d12; /* cor principal textos */
 
     --primary-bg-color: #f0f2f5;
     --secondary-bg-color: #C7C8C9;
@@ -196,6 +196,18 @@ html[data-theme='light'] .logo2 {
 
 .btn-primary span {
     color: var(--primary-color);
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 /* =====  --------------------- ======= */
