@@ -377,8 +377,14 @@ html[data-theme='light'] .logo2 {
 
 }
 
+.accordion-item.active .accordion-item.end {
+    border-radius: 0;
+
+
+}
+
 .accordion-body {
-    /* display: none; */
+    display: none; 
     padding: 1.25rem;
     flex-direction: column;
     text-align: justify;
@@ -386,6 +392,16 @@ html[data-theme='light'] .logo2 {
     gap: 1rem;
     border: 1px solid var(--primary-border-color);
 }
+
+.accordion-item.active .accordion-header {
+    background: var(--secondary-bg-color);
+}
+
+.accordion-item.active .accordion-body {
+    display: flex;
+}
+
+/* Rotacionar icone */
 
 /* =====  --------------------- ======= */
 
@@ -415,6 +431,9 @@ html[data-theme='light'] .logo2 {
 
     h2 {
         font-size: 3rem;
+    }
+    h3 {
+        font-size: 2rem;
     }
 
     #home, .projetos, .sobre, .contato {
@@ -475,7 +494,7 @@ html[data-theme='light'] .logo2 {
     }
 
     h3 {
-        font-size: 2.5;
+        font-size: 2.5rem;
     }
 
     #home {
