@@ -258,16 +258,17 @@ html[data-theme='light'] .logo2 {
 }
 
 .card-title {
-    font-size: 2rem;
+    font-size: 2.7rem;
     color: var(--title-color) ;
-    font-weight: 400;
+    font-weight: 800;
     font-family: 'googleapis';
 }
 
 .card-description {
     color: var(--primary-color);
-    /* font-size: ; */
     text-align: justify;
+    align-items: first baseline;
+    font-size: 2rem;
 }
 
 .card-lista {
@@ -524,6 +525,14 @@ footer p {
         gap: 4rem;
     }
 
+    .sobre-descricao h2 {
+        text-align: left;
+    }
+
+    .descricao-button {
+        justify-content: flex-start;
+    }
+
 }
 
 @media (min-width: 1200px ) {
@@ -540,6 +549,10 @@ footer p {
         padding: 10rem 6rem 2rem;
     }
 
+    .main-content .btn {
+        width: auto;
+    }
+
     p, span, li {
         font-size: 1.15rem;
     }
@@ -549,7 +562,7 @@ footer p {
     }
 }
 
-@media (min-width: 1400PX) {
+@media (min-width: 1400px) {
     h1{
         font-size: 6.25rem
     }
@@ -559,5 +572,14 @@ footer p {
     h3 {
         font-size: 3.25rem;
     }
+
+    .header {
+        padding: 1rem 6rem 1rem;
+    }
+
+    .projeto, .sobre {
+        padding: 10rem 5rem 4rem;
+    }
+
 }
 
