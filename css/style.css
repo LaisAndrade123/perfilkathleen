@@ -120,7 +120,7 @@ html[data-theme='light'] .logo2 {
     display: flex;
     align-items: center;
     gap: .5rem;
-    color: rgb(206, 131, 84);
+   
 }
 
 .menu-mobile {   /* UL */
